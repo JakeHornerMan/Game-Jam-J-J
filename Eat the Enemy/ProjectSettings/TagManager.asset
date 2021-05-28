@@ -15,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - SolidObjects
   - 
   - 
   - 
@@ -45,6 +45,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2878449823
+    locked: 0
+  - name: Foreground
+    uniqueID: 423595133
     locked: 0
   - name: Traps are gay
     uniqueID: 186391847
