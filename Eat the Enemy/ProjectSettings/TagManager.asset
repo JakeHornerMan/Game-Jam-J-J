@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 2878449823
     locked: 0
+  - name: Traps are gay
+    uniqueID: 186391847
+    locked: 0
   - name: Play Area
     uniqueID: 1171256619
     locked: 0
