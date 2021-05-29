@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 4882764338438498373}
   - component: {fileID: 4882764338438498372}
   - component: {fileID: 4882764338438498747}
+  - component: {fileID: 3107292608040507235}
   m_Layer: 8
   m_Name: enemy
   m_TagString: NonEatable
@@ -182,6 +183,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.33333334
+--- !u!114 &3107292608040507235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882764338438498375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b251f44995329445ae1def82db5a4a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovePointList: []
+  moveSpeed: 0
+  resttime: 0
 --- !u!1 &4882764339208937261
 GameObject:
   m_ObjectHideFlags: 0
