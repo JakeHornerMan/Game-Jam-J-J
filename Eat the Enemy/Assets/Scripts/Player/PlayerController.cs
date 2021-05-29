@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public LayerMask solidObjectsLayer;
+    public enum State {up, down, left, right, idle}
 
     private bool isMoving;
     private Vector2 input;
