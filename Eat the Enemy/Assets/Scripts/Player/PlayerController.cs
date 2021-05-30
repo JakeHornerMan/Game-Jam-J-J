@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public LayerMask solidObjectsLayer;
-    public LayerMask trapLayer;
+    
 
     public enum State {idle, up, down, left, right}
+
+
     public bool eatable1 = false;
 
     public int action = 0;
@@ -61,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
         isMoving = false;
 
-        CheckForTrap();
+        
     }
 
     private bool IsWalkable(Vector3 targetPos)
@@ -73,13 +75,7 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
-    private void CheckForTrap()
-    {
-        if (Physics2D.OverlapCircle(transform.position, 0.3f, trapLayer) != null)
-        {
-            Destroy(gameObject); 
-        }
-    }
+  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
