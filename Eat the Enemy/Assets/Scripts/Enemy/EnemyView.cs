@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyView : MonoBehaviour
 {
     
-    public enum State {up, down, left, right}
+    public enum State {up, down, left, right, blind}
 
     public Transform castpointUp;
     public Transform castpointDown;
@@ -28,7 +28,7 @@ public class EnemyView : MonoBehaviour
     public void FixedUpdate()
     {
         Look();
-        //CanSeePlayer(distance);
+
     }
 
     public void Look(){
@@ -79,6 +79,9 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointLeft.position, endPos, Color.green);
                 }
             }
+        }
+        else if(action == State.blind){
+
         }
 
         else if(action == State.right){

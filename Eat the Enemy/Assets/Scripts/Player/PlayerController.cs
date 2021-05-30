@@ -8,13 +8,20 @@ public class PlayerController : MonoBehaviour
     public LayerMask solidObjectsLayer;
     public LayerMask trapLayer;
 
-    public enum State {up, down, left, right, idle}
+    public enum State {idle, up, down, left, right}
 
+    public int action = 0;
     private bool isMoving;
     private Vector2 input;
 
+    private Animator animator;
+    public void Awake(){
+        animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
+
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
@@ -25,6 +32,10 @@ public class PlayerController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
+                
+                animator.SetFloat("inputx", input.x);
+                animator.SetFloat("inputy", input.y);
+
                 var targetPos = transform.position;
                 targetPos.x += input.x;
                 targetPos.y += input.y;
@@ -33,6 +44,7 @@ public class PlayerController : MonoBehaviour
                     StartCoroutine(Move(targetPos));
             }
         }
+        animator.SetBool("isMoving", isMoving);
     }
 
     IEnumerator Move(Vector3 targetPos)
@@ -64,11 +76,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position, 0.3f, trapLayer) != null)
         {
-            
-            
-
-                Destroy(gameObject);
-              
+            Destroy(gameObject); 
         }
     }
 }
