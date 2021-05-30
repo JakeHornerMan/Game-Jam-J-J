@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask trapLayer;
 
     public enum State {idle, up, down, left, right}
+    public bool eatable1 = false;
 
     public int action = 0;
     private bool isMoving;
@@ -79,4 +80,29 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject); 
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Trap")
+        {
+
+            Destroy(gameObject); 
+
+            if(eatable1 == false)
+            {
+                Debug.Log("I am dead");
+            }
+
+
+        }
+        else if(collision.gameObject.tag == "Eatable")
+        {
+            eatable1 = true;
+            Destroy(collision.gameObject);
+
+        }
+
+    }
+
 }
