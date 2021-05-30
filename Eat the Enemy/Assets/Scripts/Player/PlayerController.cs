@@ -6,12 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public LayerMask solidObjectsLayer;
-    
-
-    public enum State {idle, up, down, left, right}
-
-
+   
     public bool eatable1 = false;
+    public bool eatable2 = false;
+    public bool eatable3 = false;
 
     public int action = 0;
     private bool isMoving;
@@ -22,6 +20,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    //movement
     private void Update()
     {
 
@@ -50,6 +49,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isMoving", isMoving);
     }
 
+    //is character moving
     IEnumerator Move(Vector3 targetPos)
     {
         isMoving = true;
@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    //can you walk on area yes/no
     private bool IsWalkable(Vector3 targetPos)
     {
         if (Physics2D.OverlapCircle(targetPos, 0.3f, solidObjectsLayer) != null)
@@ -76,11 +77,11 @@ public class PlayerController : MonoBehaviour
     }
 
   
-
+    //Eating and trap detection
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "Trap")
+        if (collision.gameObject.tag == "Trap1")
         {
 
             Destroy(gameObject); 
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
-        else if(collision.gameObject.tag == "Eatable")
+        else if(collision.gameObject.tag == "Eatable1")
         {
             eatable1 = true;
             Destroy(collision.gameObject);
