@@ -14730,6 +14730,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[0].StopPoint.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[0].StopPoint.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[1].StopPoint.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[1].StopPoint.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[2].StopPoint.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[2].StopPoint.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[0].FacingDirection
+      value: left
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[1].FacingDirection
+      value: right
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107292608040507235, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
+      propertyPath: MovePointList.Array.data[2].FacingDirection
+      value: up
+      objectReference: {fileID: 0}
     - target: {fileID: 4882764337547452282, guid: ca2a096b93a10cb4684ec6d74a531909,
         type: 3}
       propertyPath: m_Layer
@@ -14743,7 +14798,7 @@ PrefabInstance:
     - target: {fileID: 4882764338438498372, guid: ca2a096b93a10cb4684ec6d74a531909,
         type: 3}
       propertyPath: action
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4882764338438498372, guid: ca2a096b93a10cb4684ec6d74a531909,
         type: 3}

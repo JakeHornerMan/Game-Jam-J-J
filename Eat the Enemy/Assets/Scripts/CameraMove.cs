@@ -9,14 +9,12 @@ public class CameraMove : MonoBehaviour
     private GameObject player;
 
     private GameObject cam;
-    private Camera camera;
 
     public float valuechange;
    void Start()
     {
         player = GameObject.Find("player");
         cam = GameObject.Find("Main Camera");
-        camera = cam.GetComponent<Camera>();
         pos = player.transform;
     }
 
