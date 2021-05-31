@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -132,7 +132,6 @@ public class EnemyView : MonoBehaviour
     }
 
     public void changeState(string dir){
-
         if (dir == "up"){
             action = State.up;
         }
@@ -145,7 +144,6 @@ public class EnemyView : MonoBehaviour
         else if (dir == "right"){
             action = State.right;
         } 
-
     } 
 
 
