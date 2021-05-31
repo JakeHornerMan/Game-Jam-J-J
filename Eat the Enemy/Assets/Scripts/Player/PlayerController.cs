@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour
     public bool eatable2 = false;
     public bool eatable3 = false;
 
+    public float win;
+    public float winPoints = 0;
+    public bool dead = false;
+
+    
+
     public int action = 0;
     private bool isMoving;
     private Vector2 input;
@@ -47,6 +53,13 @@ public class PlayerController : MonoBehaviour
             }
         }
         animator.SetBool("isMoving", isMoving);
+
+        if (dead == true)
+        {
+            winPoints = winPoints + 1;
+        }
+
+        dead = false;
     }
 
     //is character moving
@@ -76,19 +89,19 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
-  
+
     //Eating and trap detection
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.tag == "Trap1")
         {
-            if(eatable1 == false)
+            if (eatable1 == false)
             {
-                Destroy(this.gameObject);
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
-        else if(collision.gameObject.tag == "Trap2")
+        else if (collision.gameObject.tag == "Trap2")
         {
             if (eatable2 == false)
             {
@@ -102,28 +115,43 @@ public class PlayerController : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if(collision.gameObject.tag == "Eatable1")
+        else if (collision.gameObject.tag == "Eatable1")
         {
             eatable1 = true;
             eatable2 = false;
             eatable3 = false;
             Destroy(collision.gameObject);
+            dead = true;
+            
 
         }
         else if (collision.gameObject.tag == "Eatable2")
         {
+
             eatable1 = false;
             eatable2 = true;
             eatable3 = false;
             Destroy(collision.gameObject);
+            
 
         }
         else if (collision.gameObject.tag == "Eatable3")
         {
+
             eatable1 = false;
             eatable2 = false;
             eatable3 = true;
             Destroy(collision.gameObject);
+            
+
+        }
+        else if (collision.gameObject.tag == "Winner")
+        {
+            if (win == winPoints)
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
+
 
         }
 

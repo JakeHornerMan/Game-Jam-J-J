@@ -12,6 +12,7 @@ TagManager:
   - Eatable2
   - Eatable3
   - Eatable1
+  - Winner
   layers:
   - Default
   - TransparentFX

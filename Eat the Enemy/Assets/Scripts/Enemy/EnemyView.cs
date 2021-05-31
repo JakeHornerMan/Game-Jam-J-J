@@ -35,10 +35,12 @@ public class EnemyView : MonoBehaviour
         if(action == State.up){
 
             animator.SetInteger("dir", 1);
+            
 
             Vector2 endPos = castpointUp.position + Vector3.up * distance;
             RaycastHit2D hit = Physics2D.Linecast(castpointUp.position, endPos, 1 << LayerMask.NameToLayer("SolidObjects"));
-            
+            Debug.DrawLine(castpointUp.position, endPos, Color.blue);
+
             if (hit.collider != null){
                 if(hit.collider.tag == "Player"){
                     Debug.DrawLine(castpointUp.position, endPos, Color.red);
@@ -57,7 +59,8 @@ public class EnemyView : MonoBehaviour
 
             Vector2 endPos = castpointDown.position - Vector3.up * distance;
             RaycastHit2D hit = Physics2D.Linecast(castpointDown.position, endPos, 1 << LayerMask.NameToLayer("SolidObjects"));
-            
+            Debug.DrawLine(castpointDown.position, endPos, Color.blue);
+
             if (hit.collider != null){
                 if(hit.collider.tag == "Player"){
                     Debug.DrawLine(castpointDown.position, endPos, Color.red);
@@ -76,7 +79,8 @@ public class EnemyView : MonoBehaviour
 
             Vector2 endPos = castpointLeft.position + Vector3.left * distance;
             RaycastHit2D hit = Physics2D.Linecast(castpointLeft.position, endPos, 1 << LayerMask.NameToLayer("SolidObjects"));
-            
+            Debug.DrawLine(castpointLeft.position, endPos, Color.blue);
+
             if (hit.collider != null){
                 if(hit.collider.tag == "Player"){
                     Debug.DrawLine(castpointLeft.position, endPos, Color.red);
@@ -98,7 +102,8 @@ public class EnemyView : MonoBehaviour
 
             Vector2 endPos = castpointRight.position + Vector3.right * distance;
             RaycastHit2D hit = Physics2D.Linecast(castpointRight.position, endPos, 1 << LayerMask.NameToLayer("SolidObjects"));
-            
+            Debug.DrawLine(castpointRight.position, endPos, Color.blue);
+
             if (hit.collider != null){
                 if(hit.collider.tag == "Player"){
                     Debug.DrawLine(castpointRight.position, endPos, Color.red);
@@ -121,6 +126,8 @@ public class EnemyView : MonoBehaviour
         if (hit.collider != null){
             Debug.Log(hit.collider.tag);
         }
+
+        Application.LoadLevel(Application.loadedLevel);
 
     }
 
