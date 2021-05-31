@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: CastPointRight
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -42,7 +42,7 @@ GameObject:
   m_Layer: 0
   m_Name: CastPointUp
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -71,13 +71,14 @@ GameObject:
   - component: {fileID: 4882764338438498746}
   - component: {fileID: 4882764338438498373}
   - component: {fileID: 4882764338438498372}
+  - component: {fileID: 4140181294086866118}
   - component: {fileID: 3107292608040507235}
-  - component: {fileID: 2690135614996038409}
-  - component: {fileID: 340828440187922681}
   - component: {fileID: 1716880544126218653}
+  - component: {fileID: 5799693239321139900}
+  - component: {fileID: 8123749895320625761}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: NonEatable
+  m_TagString: Eatable1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,13 +163,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f36bd417f46a444f94c9ab06076f7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action: 2
   castpointUp: {fileID: 4882764337870178991}
   castpointDown: {fileID: 4882764339270102080}
   castpointRight: {fileID: 4882764337547452283}
   castpointLeft: {fileID: 4882764339208937250}
   gamemanager: {fileID: 0}
-  action: 2
   distance: 5
+--- !u!114 &4140181294086866118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882764338438498375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d0c3bc7f597bd49aeaaf79bbe764e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  startWaitTime: 0
+  moveSpots: []
 --- !u!114 &3107292608040507235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,31 +200,6 @@ MonoBehaviour:
   MovePointList: []
   moveSpeed: 0
   resttime: 0
---- !u!114 &2690135614996038409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4882764338438498375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca50bc4d010e6c947b290fb0ea8d323a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &340828440187922681
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4882764338438498375}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.76768243, y: 0.73756695, z: 0.2}
-  m_Center: {x: 0, y: -0.0021512508, z: 0}
 --- !u!95 &1716880544126218653
 Animator:
   serializedVersion: 3
@@ -228,6 +219,53 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &5799693239321139900
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882764338438498375}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0094717145, y: -0.0023679137}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.6666667, y: 0.6666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.72531927, y: 0.7300552}
+  m_EdgeRadius: 0
+--- !u!50 &8123749895320625761
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882764338438498375}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4882764339208937261
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +278,7 @@ GameObject:
   m_Layer: 0
   m_Name: CastPointLeft
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -270,7 +308,7 @@ GameObject:
   m_Layer: 0
   m_Name: CastPointDown
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

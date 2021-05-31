@@ -8,8 +8,10 @@ public class EnemyAI : MonoBehaviour
     private float waitTime;
     public float startWaitTime;
 
-    public Transform[] moveSpots;
+    public MovePoint[] moveSpots;
     private int nextSpot;
+
+    
 
     private void Start()
     {
@@ -21,45 +23,46 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-
+        
         for (int counter = 0; counter < moveSpots.Length; counter++)
         {
+
+            
+
             if (nextSpot >= moveSpots.Length)
             {
                 nextSpot = 0;
+                GetComponent<EnemyView>().changeState(moveSpots[nextSpot].FacingDirection);
             }
 
-            transform.position = Vector2.MoveTowards(transform.position, moveSpots[nextSpot].position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, moveSpots[nextSpot].StopPoint, speed * Time.deltaTime);
 
-            if (Vector2.Distance(transform.position, moveSpots[nextSpot].position) < 0.2f)
+            if (Vector2.Distance(transform.position, moveSpots[nextSpot].StopPoint) < 0.2f)
             {
-
+                
 
                 if (waitTime <= 0)
                 {
 
                     waitTime = startWaitTime;
                     nextSpot = nextSpot + 1;
+                    GetComponent<EnemyView>().changeState(moveSpots[nextSpot].FacingDirection);
                 }
                 else
                 {
                     waitTime -= Time.deltaTime;
                 }
-                
-
 
             }
-
-
             Debug.Log(nextSpot);
-            
-
         }
-
-
-
-       
-
     }
 
+}
+
+
+[System.Serializable]
+public class MovePoint {
+    public string FacingDirection;
+    public Vector2 StopPoint;
 }

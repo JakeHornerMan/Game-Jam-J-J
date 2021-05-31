@@ -124,6 +124,23 @@ public class EnemyView : MonoBehaviour
 
     }
 
+    public void changeState(string dir){
+
+        if (dir == "up"){
+            action = State.up;
+        }
+        else if (dir == "down"){
+            action = State.down;
+        }
+        else if (dir == "left"){
+            action = State.left;
+        }
+        else if (dir == "right"){
+            action = State.right;
+        } 
+
+    } 
+
 
 
 }

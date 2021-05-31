@@ -59,8 +59,3 @@ public class EnemyMovement : MonoBehaviour
     }
 }
 
-[System.Serializable]
-public class MovePoint {
-    public string FacingDirection;
-    public Vector3 StopPoint;
-}
