@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour
     {
         waitTime = startWaitTime;
         nextSpot = 1;
-        
+        GetComponent<EnemyView>().changeState(moveSpots[nextSpot].FacingDirection);
         
     }
 
