@@ -83,20 +83,46 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "Trap1")
         {
-
-             
-
             if(eatable1 == false)
             {
-                Debug.Log("I am dead");
                 Destroy(this.gameObject);
             }
-            
-
+        }
+        else if(collision.gameObject.tag == "Trap2")
+        {
+            if (eatable2 == false)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        else if (collision.gameObject.tag == "Trap3")
+        {
+            if (eatable3 == false)
+            {
+                Destroy(this.gameObject);
+            }
         }
         else if(collision.gameObject.tag == "Eatable1")
         {
             eatable1 = true;
+            eatable2 = false;
+            eatable3 = false;
+            Destroy(collision.gameObject);
+
+        }
+        else if (collision.gameObject.tag == "Eatable2")
+        {
+            eatable1 = false;
+            eatable2 = true;
+            eatable3 = false;
+            Destroy(collision.gameObject);
+
+        }
+        else if (collision.gameObject.tag == "Eatable3")
+        {
+            eatable1 = false;
+            eatable2 = false;
+            eatable3 = true;
             Destroy(collision.gameObject);
 
         }
