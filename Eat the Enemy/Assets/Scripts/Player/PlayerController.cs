@@ -84,13 +84,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Trap1")
         {
 
-            Destroy(gameObject); 
+             
 
             if(eatable1 == false)
             {
                 Debug.Log("I am dead");
+                Destroy(this.gameObject);
             }
-
+            
 
         }
         else if(collision.gameObject.tag == "Eatable1")

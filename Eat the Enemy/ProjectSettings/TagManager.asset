@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Eatable
   - NonEatable
+  - Trap1
+  - Trap2
+  - Trap3
+  - Eatable2
+  - Eatable3
+  - Eatable1
   layers:
   - Default
   - TransparentFX
