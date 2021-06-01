@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
             eatable3 = false;
             Destroy(collision.gameObject);
             dead = true;
-           // gamemanager.GetComponent<GameManager>().blueColor();
+            colorIndicator.GetComponent<IconColorChange>().blueColor();
 
         }
         else if (collision.gameObject.tag == "Eatable3")
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
             eatable3 = true;
             Destroy(collision.gameObject);
             dead = true;
-           // gamemanager.GetComponent<GameManager>().redColor();
+            colorIndicator.GetComponent<IconColorChange>().redColor();
 
         }
         else if (collision.gameObject.tag == "NonEatable")
@@ -163,11 +163,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Winner")
         {
-            if (win == winPoints)
-            {
-                //win
-                
-            }
+            gamemanager.GetComponent<GameManager>().Menu();
         }
         
 

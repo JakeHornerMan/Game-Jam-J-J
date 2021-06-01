@@ -8,10 +8,7 @@ public class IconColorChange : MonoBehaviour
 {
     public List<Color> colors;
 
-   /* private void Start()
-    {
-        GetComponent<Image>().color = Color.green;
-    }*/
+   
 
     public void greenColor()
     {
