@@ -72,7 +72,6 @@ GameObject:
   - component: {fileID: 4882764338438498373}
   - component: {fileID: 4882764338438498372}
   - component: {fileID: 4140181294086866118}
-  - component: {fileID: 3107292608040507235}
   - component: {fileID: 1716880544126218653}
   - component: {fileID: 5799693239321139900}
   - component: {fileID: 8123749895320625761}
@@ -169,7 +168,7 @@ MonoBehaviour:
   castpointRight: {fileID: 4882764337547452283}
   castpointLeft: {fileID: 4882764339208937250}
   gamemanager: {fileID: 0}
-  distance: 5
+  distance: 10
 --- !u!114 &4140181294086866118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,21 +184,6 @@ MonoBehaviour:
   speed: 1
   startWaitTime: 10
   moveSpots: []
---- !u!114 &3107292608040507235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4882764338438498375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b251f44995329445ae1def82db5a4a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovePointList: []
-  moveSpeed: 0
-  resttime: 0
 --- !u!95 &1716880544126218653
 Animator:
   serializedVersion: 3

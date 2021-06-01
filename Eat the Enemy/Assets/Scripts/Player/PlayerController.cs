@@ -105,14 +105,14 @@ public class PlayerController : MonoBehaviour
         {
             if (eatable2 == false)
             {
-                Destroy(this.gameObject);
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
         else if (collision.gameObject.tag == "Trap3")
         {
             if (eatable3 == false)
             {
-                Destroy(this.gameObject);
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
         else if (collision.gameObject.tag == "Eatable1")
@@ -132,7 +132,8 @@ public class PlayerController : MonoBehaviour
             eatable2 = true;
             eatable3 = false;
             Destroy(collision.gameObject);
-            
+            dead = true;
+
 
         }
         else if (collision.gameObject.tag == "Eatable3")
@@ -142,8 +143,13 @@ public class PlayerController : MonoBehaviour
             eatable2 = false;
             eatable3 = true;
             Destroy(collision.gameObject);
-            
+            dead = true;
 
+
+        }
+        else if (collision.gameObject.tag == "NonEatable")
+        {
+                Application.LoadLevel(Application.loadedLevel);
         }
         else if (collision.gameObject.tag == "Winner")
         {
@@ -151,8 +157,6 @@ public class PlayerController : MonoBehaviour
             {
                 Application.LoadLevel(Application.loadedLevel);
             }
-
-
         }
 
     }

@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour
                 }
 
             }
-            Debug.Log(nextSpot);
+            /*Debug.Log(nextSpot);*/
         }
     }
 

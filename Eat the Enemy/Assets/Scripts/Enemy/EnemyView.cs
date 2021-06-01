@@ -46,6 +46,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointUp.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    Application.LoadLevel(Application.loadedLevel);
                 }
             }
             else{
@@ -66,6 +67,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointDown.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    Application.LoadLevel(Application.loadedLevel);
                 }
             }
             else{
@@ -86,6 +88,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointLeft.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    Application.LoadLevel(Application.loadedLevel);
                 }
                 else{
                     Debug.DrawLine(castpointLeft.position, endPos, Color.green);
@@ -109,6 +112,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointRight.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    Application.LoadLevel(Application.loadedLevel);
                 }
             }
             else{
@@ -127,7 +131,7 @@ public class EnemyView : MonoBehaviour
             Debug.Log(hit.collider.tag);
         }
 
-        Application.LoadLevel(Application.loadedLevel);
+        
 
     }
 

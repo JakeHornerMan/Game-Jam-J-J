@@ -75,10 +75,9 @@ GameObject:
   - component: {fileID: 1825186552081546161}
   - component: {fileID: 6844186072167436432}
   - component: {fileID: 9095744852913301581}
-  - component: {fileID: 5567813591037223530}
   m_Layer: 9
   m_Name: red
-  m_TagString: Eatable1
+  m_TagString: Eatable3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +168,7 @@ MonoBehaviour:
   castpointRight: {fileID: 5567813590858716503}
   castpointLeft: {fileID: 5567813592418456846}
   gamemanager: {fileID: 0}
-  distance: 5
+  distance: 1
 --- !u!114 &4031610407235620586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,15 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.3
   startWaitTime: 10
-  moveSpots:
-  - FacingDirection: up
-    StopPoint: {x: 1.5, y: 0.5}
-  - FacingDirection: right
-    StopPoint: {x: 5.5, y: 0.5}
-  - FacingDirection: down
-    StopPoint: {x: 5.5, y: -3.5}
-  - FacingDirection: left
-    StopPoint: {x: 1.5, y: -3.5}
+  moveSpots: []
 --- !u!95 &1825186552081546161
 Animator:
   serializedVersion: 3
@@ -259,27 +250,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5567813591037223530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567813591037223531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b251f44995329445ae1def82db5a4a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovePointList:
-  - FacingDirection: right
-    StopPoint: {x: 2.5, y: 0.5}
-  - FacingDirection: up
-    StopPoint: {x: 2.5, y: 3.5}
-  - FacingDirection: left
-    StopPoint: {x: -1.5, y: 3.5}
-  moveSpeed: 1
-  resttime: 1
 --- !u!1 &5567813592355202671
 GameObject:
   m_ObjectHideFlags: 0
