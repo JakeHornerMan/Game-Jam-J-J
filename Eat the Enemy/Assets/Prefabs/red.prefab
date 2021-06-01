@@ -168,7 +168,7 @@ MonoBehaviour:
   castpointRight: {fileID: 5567813590858716503}
   castpointLeft: {fileID: 5567813592418456846}
   gamemanager: {fileID: 0}
-  distance: 1
+  distance: 2
 --- !u!114 &4031610407235620586
 MonoBehaviour:
   m_ObjectHideFlags: 0
