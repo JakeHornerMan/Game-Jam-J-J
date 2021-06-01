@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameovertext;
     public GameObject restartBtn;
     public GameObject menuBtn;
+    public GameObject wintext;
+    public GameObject quitBtn;
 
     
 
@@ -17,6 +19,8 @@ public class GameManager : MonoBehaviour
         gameovertext.SetActive(false);
         restartBtn.SetActive(false);
         menuBtn.SetActive(false);
+        wintext.SetActive(false);
+        quitBtn.SetActive(true);
     }
 
     public void GameOver(){
@@ -37,6 +41,20 @@ public class GameManager : MonoBehaviour
     public void Menu(){
         SceneManager.LoadScene("Main Menu");
         Debug.Log("button works");
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void Winner()
+    {
+        Time.timeScale = 0f;
+
+        menuBtn.SetActive(true);
+        restartBtn.SetActive(true);
+        wintext.SetActive(true);
     }
 
     

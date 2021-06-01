@@ -17,9 +17,9 @@ public class PlayerController : MonoBehaviour
     public GameObject colorIndicator;
     
 
-    public float win;
+    /*public float win;
     public float winPoints = 0;
-    public bool dead = false;
+    public bool dead = false;*/
 
     
 
@@ -62,12 +62,12 @@ public class PlayerController : MonoBehaviour
         }
         animator.SetBool("isMoving", isMoving);
 
-        if (dead == true)
+       /* if (dead == true)
         {
             winPoints = winPoints + 1;
         }
 
-        dead = false;
+        dead = false;*/
     }
 
     //is character moving
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             eatable2 = false;
             eatable3 = false;
             Destroy(collision.gameObject);
-            dead = true;
+            //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
 
 
@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
             eatable2 = true;
             eatable3 = false;
             Destroy(collision.gameObject);
-            dead = true;
+            //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
 
         }
@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
             eatable2 = false;
             eatable3 = true;
             Destroy(collision.gameObject);
-            dead = true;
+            //dead = true;
             colorIndicator.GetComponent<IconColorChange>().redColor();
 
         }
@@ -163,7 +163,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Winner")
         {
-            gamemanager.GetComponent<GameManager>().Menu();
+            
+            gamemanager.GetComponent<GameManager>().Winner();
         }
         
 
