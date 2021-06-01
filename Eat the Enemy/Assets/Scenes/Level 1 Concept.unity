@@ -1036,6 +1036,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48c7597b4233734395ed011646a8848, type: 3}
+--- !u!1 &1042461952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5346225528160187549, guid: d48c7597b4233734395ed011646a8848,
+    type: 3}
+  m_PrefabInstance: {fileID: 1042461951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1079647669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1252,6 +1258,11 @@ PrefabInstance:
       propertyPath: menuBtn
       value: 
       objectReference: {fileID: 46140662}
+    - target: {fileID: 8889388159978640367, guid: dac2293afef894b4d83c15d8308a7058,
+        type: 3}
+      propertyPath: quitBtn
+      value: 
+      objectReference: {fileID: 1042461952}
     - target: {fileID: 8889388159978640367, guid: dac2293afef894b4d83c15d8308a7058,
         type: 3}
       propertyPath: wintext
