@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,21 +10,11 @@ public class GameManager : MonoBehaviour
     public GameObject menuBtn;
     void Start()
     {
-        gameovertext = GameObject.Find("Game Over");
-        restartBtn = GameObject.Find("Restart");
-        menuBtn = GameObject.Find("Main Menu");
-
-
         gameovertext.SetActive(false);
         restartBtn.SetActive(false);
         menuBtn.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void GameOver(){
         
         Time.timeScale = 0f;
@@ -34,11 +25,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void Restart(){
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene("Jake Test");
     }
 
     public void Menu(){
-
+        SceneManager.LoadScene("Main Menu");
     }
 
 }
