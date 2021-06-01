@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial 1.unity
+    path: Assets/TextMesh Pro/Fonts/Scenes/Tutorial 1.unity
     guid: 702b0409332777040a63e997d7fc0a71
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/TextMesh Pro/Fonts/Scenes/Main Menu.unity
     guid: 5c9e42f0dd67a574299e115179021af2
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/TextMesh Pro/Fonts/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/JakeTest.unity
+    path: Assets/TextMesh Pro/Fonts/Scenes/JakeTest.unity
     guid: 74977a55258ea18459445e140ce1571b
   m_configObjects: {}

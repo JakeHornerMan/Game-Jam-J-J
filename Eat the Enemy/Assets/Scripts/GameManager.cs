@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public GameObject gameovertext;
     public GameObject restartBtn;
     public GameObject menuBtn;
+
+    
+
     void Start()
     {
         gameovertext.SetActive(false);
@@ -25,12 +29,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void Restart(){
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Jake Test");
     }
 
     public void Menu(){
         SceneManager.LoadScene("Main Menu");
+        Debug.Log("button works");
     }
+
+    
 
 }

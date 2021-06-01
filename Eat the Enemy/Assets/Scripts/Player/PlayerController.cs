@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PlayerController : MonoBehaviour
     public bool eatable1 = false;
     public bool eatable2 = false;
     public bool eatable3 = false;
+  
+       
+    public GameObject gamemanager;
+    public GameObject colorIndicator;
+    
 
     public float win;
     public float winPoints = 0;
@@ -25,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public void Awake(){
         animator = GetComponent<Animator>();
     }
+
+   
 
     //movement
     private void Update()
@@ -98,21 +106,22 @@ public class PlayerController : MonoBehaviour
         {
             if (eatable1 == false)
             {
-                //kill
+                gamemanager.GetComponent<GameManager>().GameOver();
+                
             }
         }
         else if (collision.gameObject.tag == "Trap2")
         {
             if (eatable2 == false)
             {
-                //kill
+                gamemanager.GetComponent<GameManager>().GameOver();
             }
         }
         else if (collision.gameObject.tag == "Trap3")
         {
             if (eatable3 == false)
             {
-                //kill
+                gamemanager.GetComponent<GameManager>().GameOver();
             }
         }
         else if (collision.gameObject.tag == "Eatable1")
@@ -122,6 +131,7 @@ public class PlayerController : MonoBehaviour
             eatable3 = false;
             Destroy(collision.gameObject);
             dead = true;
+            colorIndicator.GetComponent<IconColorChange>().greenColor();
 
 
         }
@@ -133,7 +143,7 @@ public class PlayerController : MonoBehaviour
             eatable3 = false;
             Destroy(collision.gameObject);
             dead = true;
-
+           // gamemanager.GetComponent<GameManager>().blueColor();
 
         }
         else if (collision.gameObject.tag == "Eatable3")
@@ -144,20 +154,22 @@ public class PlayerController : MonoBehaviour
             eatable3 = true;
             Destroy(collision.gameObject);
             dead = true;
-
+           // gamemanager.GetComponent<GameManager>().redColor();
 
         }
         else if (collision.gameObject.tag == "NonEatable")
         {
-            //kill
+            gamemanager.GetComponent<GameManager>().GameOver();
         }
         else if (collision.gameObject.tag == "Winner")
         {
             if (win == winPoints)
             {
-                //kill
+                //win
+                
             }
         }
+        
 
     }
 

@@ -13,6 +13,9 @@ TagManager:
   - Eatable3
   - Eatable1
   - Winner
+  - TutControls
+  - TutEnemies
+  - TutTraps
   layers:
   - Default
   - TransparentFX
