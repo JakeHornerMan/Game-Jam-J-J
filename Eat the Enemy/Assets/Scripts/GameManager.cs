@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Restart(){
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Jake Test");
     }
 
