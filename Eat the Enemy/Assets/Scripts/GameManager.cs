@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject restartBtn;
     public GameObject menuBtn;
     public GameObject wintext;
-    public GameObject quitBtn;
+    public GameObject pauseBtn;
+    public GameObject resumeBtn;
+    public GameObject pausetext;
 
     
 
@@ -20,7 +22,9 @@ public class GameManager : MonoBehaviour
         restartBtn.SetActive(false);
         menuBtn.SetActive(false);
         wintext.SetActive(false);
-        quitBtn.SetActive(true);
+        pauseBtn.SetActive(true);
+        resumeBtn.SetActive(false);
+        pausetext.SetActive(false);
     }
 
     public void GameOver(){
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour
         gameovertext.SetActive(true);
         restartBtn.SetActive(true);
         menuBtn.SetActive(true);
+        pauseBtn.SetActive(false);
     }
 
     public void Restart(){
@@ -43,15 +48,33 @@ public class GameManager : MonoBehaviour
         Debug.Log("button works");
     }
 
-    public void Quit()
+    public void Pause()
     {
-        SceneManager.LoadScene("Main Menu");
+        Time.timeScale = 0f;
+
+        menuBtn.SetActive(true);
+        restartBtn.SetActive(true);
+        pausetext.SetActive(true);
+        pauseBtn.SetActive(false);
+        resumeBtn.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+
+        menuBtn.SetActive(false);
+        restartBtn.SetActive(false);
+        pausetext.SetActive(false);
+        pauseBtn.SetActive(true);
+        resumeBtn.SetActive(false);
     }
 
     public void Winner()
     {
         Time.timeScale = 0f;
 
+        pauseBtn.SetActive(false);
         menuBtn.SetActive(true);
         restartBtn.SetActive(true);
         wintext.SetActive(true);
