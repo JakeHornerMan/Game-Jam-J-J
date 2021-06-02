@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4882764337547452283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CastPointRight
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4882764337870178991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CastPointUp
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -75,9 +75,9 @@ GameObject:
   - component: {fileID: 1716880544126218653}
   - component: {fileID: 5799693239321139900}
   - component: {fileID: 8123749895320625761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy
-  m_TagString: Eatable1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4882764339208937250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CastPointLeft
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4882764339270102080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CastPointDown
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}

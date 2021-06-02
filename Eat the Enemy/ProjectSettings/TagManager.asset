@@ -16,6 +16,7 @@ TagManager:
   - TutControls
   - TutEnemies
   - TutTraps
+  - TutEye
   layers:
   - Default
   - TransparentFX
