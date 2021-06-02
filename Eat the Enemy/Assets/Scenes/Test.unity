@@ -367,8 +367,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882764338438498375, guid: ca2a096b93a10cb4684ec6d74a531909,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882764338438498375, guid: ca2a096b93a10cb4684ec6d74a531909,
+        type: 3}
       propertyPath: m_TagString
-      value: NonEatable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4882764338438498746, guid: ca2a096b93a10cb4684ec6d74a531909,
         type: 3}
@@ -901,6 +906,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameovertext: {fileID: 539501025}
+  restartBtn: {fileID: 0}
+  menuBtn: {fileID: 0}
+  wintext: {fileID: 0}
+  pauseBtn: {fileID: 0}
+  resumeBtn: {fileID: 0}
+  pausetext: {fileID: 0}
 --- !u!4 &1334752872
 Transform:
   m_ObjectHideFlags: 0
