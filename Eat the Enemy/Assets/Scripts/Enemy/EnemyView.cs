@@ -21,6 +21,7 @@ public class EnemyView : MonoBehaviour
     private Animator animator;
     public void Awake(){
         animator = GetComponent<Animator>();
+        gamemanager = GameObject.Find("GameManager");
     }
 
     // Update is called once per frame
