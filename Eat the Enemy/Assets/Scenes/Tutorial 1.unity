@@ -1878,7 +1878,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You use W,A,S,D, to move.
+  m_Text: Use W,A,S,D, to move. Use Q to zoom in and E to zoom out. The goal is to
+    reach the finish line.
 --- !u!222 &903418046
 CanvasRenderer:
   m_ObjectHideFlags: 0
