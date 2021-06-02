@@ -354,12 +354,12 @@ PrefabInstance:
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
       propertyPath: speed
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
       propertyPath: moveSpots.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
@@ -374,11 +374,31 @@ PrefabInstance:
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
       propertyPath: moveSpots.Array.data[1].StopPoint.x
-      value: 13.5
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
       propertyPath: moveSpots.Array.data[1].StopPoint.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
+        type: 3}
+      propertyPath: moveSpots.Array.data[2].StopPoint.x
+      value: 22.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
+        type: 3}
+      propertyPath: moveSpots.Array.data[2].StopPoint.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
+        type: 3}
+      propertyPath: moveSpots.Array.data[3].StopPoint.x
+      value: 13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
+        type: 3}
+      propertyPath: moveSpots.Array.data[3].StopPoint.y
       value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
@@ -389,6 +409,16 @@ PrefabInstance:
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
       propertyPath: moveSpots.Array.data[1].FacingDirection
+      value: up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
+        type: 3}
+      propertyPath: moveSpots.Array.data[2].FacingDirection
+      value: down
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
+        type: 3}
+      propertyPath: moveSpots.Array.data[3].FacingDirection
       value: left
       objectReference: {fileID: 0}
     - target: {fileID: 5567813591037223528, guid: 901e131a840a97348a08aedb83f25916,
@@ -558,6 +588,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
+        type: 3}
+      propertyPath: speed
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
       propertyPath: moveSpots.Array.size
@@ -1722,7 +1757,7 @@ PrefabInstance:
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
       propertyPath: speed
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
@@ -2049,12 +2084,12 @@ PrefabInstance:
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
       propertyPath: speed
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
       propertyPath: moveSpots.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
@@ -2069,11 +2104,31 @@ PrefabInstance:
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
       propertyPath: moveSpots.Array.data[1].StopPoint.x
-      value: 10.5
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
       propertyPath: moveSpots.Array.data[1].StopPoint.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
+        type: 3}
+      propertyPath: moveSpots.Array.data[2].StopPoint.x
+      value: 20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
+        type: 3}
+      propertyPath: moveSpots.Array.data[2].StopPoint.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
+        type: 3}
+      propertyPath: moveSpots.Array.data[3].StopPoint.x
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
+        type: 3}
+      propertyPath: moveSpots.Array.data[3].StopPoint.y
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
@@ -2084,6 +2139,16 @@ PrefabInstance:
     - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
         type: 3}
       propertyPath: moveSpots.Array.data[1].FacingDirection
+      value: up
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
+        type: 3}
+      propertyPath: moveSpots.Array.data[2].FacingDirection
+      value: down
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084148589910515653, guid: b14afcf696cb902478565c4f21d97e18,
+        type: 3}
+      propertyPath: moveSpots.Array.data[3].FacingDirection
       value: left
       objectReference: {fileID: 0}
     - target: {fileID: 5799203061036675769, guid: b14afcf696cb902478565c4f21d97e18,
