@@ -269,7 +269,7 @@ PrefabInstance:
     - target: {fileID: 4205858203690612639, guid: b88a943a37ba5fa4aae013bcd11d5b1e,
         type: 3}
       propertyPath: speed
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4205858203690612639, guid: b88a943a37ba5fa4aae013bcd11d5b1e,
         type: 3}
@@ -413,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
       propertyPath: speed
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4031610407235620586, guid: 901e131a840a97348a08aedb83f25916,
         type: 3}
@@ -35632,7 +35632,7 @@ PrefabInstance:
     - target: {fileID: 4205858203690612639, guid: b88a943a37ba5fa4aae013bcd11d5b1e,
         type: 3}
       propertyPath: speed
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4205858203690612639, guid: b88a943a37ba5fa4aae013bcd11d5b1e,
         type: 3}
@@ -35849,6 +35849,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1353244146231867780, guid: d48c7597b4233734395ed011646a8848,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1353244146231867781, guid: d48c7597b4233734395ed011646a8848,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -35868,6 +35873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353244147121862939, guid: d48c7597b4233734395ed011646a8848,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1353244147359479654, guid: d48c7597b4233734395ed011646a8848,
         type: 3}
@@ -35983,6 +35993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846087746719354842, guid: d48c7597b4233734395ed011646a8848,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48c7597b4233734395ed011646a8848, type: 3}
