@@ -19,7 +19,11 @@ public class PlayerController : MonoBehaviour
 
     public GameObject gamemanager;
     public GameObject colorIndicator;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> parent of d7a1bf4 (under construction)
 
     /*public float win;
     public float winPoints = 0;
@@ -149,7 +153,11 @@ public class PlayerController : MonoBehaviour
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
+<<<<<<< HEAD
 
+=======
+            SoundManager.PlaySound("chomp");
+>>>>>>> parent of d7a1bf4 (under construction)
 
 
         }
@@ -212,7 +220,11 @@ public class PlayerController : MonoBehaviour
         gamemanager.GetComponent<GameManager>().GameOver();
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+    
+>>>>>>> parent of d7a1bf4 (under construction)
 }
