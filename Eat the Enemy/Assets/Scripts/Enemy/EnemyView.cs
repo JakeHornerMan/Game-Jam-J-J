@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyView : MonoBehaviour
 {
     
+
     public enum State {up, down, left, right, blind}
     public State action;
     public Transform castpointUp;
@@ -25,6 +26,8 @@ public class EnemyView : MonoBehaviour
         animator = GetComponent<Animator>();
         gamemanager = GameObject.Find("GameManager");
     }
+
+    
 
     // Update is called once per frame
     public void FixedUpdate()
