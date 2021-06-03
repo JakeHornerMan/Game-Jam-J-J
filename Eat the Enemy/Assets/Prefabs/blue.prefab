@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 318187656834755230}
   - component: {fileID: 4883413254335365567}
   - component: {fileID: 7135007221465971042}
-  - component: {fileID: 1456106071344979860}
   - component: {fileID: 4235777658492734489}
+  - component: {fileID: -4969594390685904809}
   m_Layer: 9
   m_Name: blue
   m_TagString: Eatable2
@@ -312,7 +312,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!82 &1456106071344979860
+--- !u!114 &4235777658492734489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799203061036675908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cefbd40c0aa7840b076d243bed1618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &-4969594390685904809
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,15 +420,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4235777658492734489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799203061036675908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92cefbd40c0aa7840b076d243bed1618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

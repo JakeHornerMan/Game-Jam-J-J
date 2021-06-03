@@ -19,14 +19,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject gamemanager;
     public GameObject colorIndicator;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> parent of d7a1bf4 (under construction)
-    
->>>>>>> parent of d7a1bf4 (under construction)
 
     /*public float win;
     public float winPoints = 0;
@@ -156,21 +149,13 @@ public class PlayerController : MonoBehaviour
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            SoundManager.PlaySound("chomp");
->>>>>>> parent of d7a1bf4 (under construction)
-=======
-            SoundManager.PlaySound("chomp");
->>>>>>> parent of d7a1bf4 (under construction)
 
 
         }
         else if (collision.gameObject.tag == "Eatable2")
         {
-            SoundManager.PlaySound("chomp");
+            
             eatable1 = false;
             eatable2 = true;
             eatable3 = false;
@@ -186,7 +171,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Eatable3")
         {
-            SoundManager.PlaySound("chomp");
+            
             eatable1 = false;
             eatable2 = false;
             eatable3 = true;
@@ -227,14 +212,7 @@ public class PlayerController : MonoBehaviour
         gamemanager.GetComponent<GameManager>().GameOver();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
-=======
->>>>>>> parent of d7a1bf4 (under construction)
     
->>>>>>> parent of d7a1bf4 (under construction)
+
 }
