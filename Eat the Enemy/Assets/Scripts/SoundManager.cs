@@ -22,7 +22,7 @@ public class SoundManager : MonoBehaviour
         switch (sound) 
         {
             case "chomp":
-                audioSrc.PlayOneShot(chomp);
+                audioSrc.PlayOneShot(death);
                 break;
             case "death":
                 audioSrc.PlayOneShot(death);

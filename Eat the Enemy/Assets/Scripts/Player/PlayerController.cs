@@ -143,20 +143,16 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Eatable1")
         {
-            //SoundManager.PlaySound("chomp");
+            
             eatable1 = true;
             eatable2 = false;
             eatable3 = false;
-            
+            SoundManager.PlaySound("chomp");
             Destroy(collision.gameObject);
+
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
-            /*if (canPlaySound == true)
-            {
-                SoundManager.PlaySound("chomp");
-                coroutine = waittoPlay(0.5f); // wait one second
-                StartCoroutine(coroutine);
-            }*/
+            
 
 
         }
@@ -166,15 +162,13 @@ public class PlayerController : MonoBehaviour
             eatable1 = false;
             eatable2 = true;
             eatable3 = false;
-            
+            SoundManager.PlaySound("chomp");
             Destroy(collision.gameObject);
+
+
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
-            /*if(canPlaySound ==true){
-                SoundManager.PlaySound("chomp");
-                coroutine = waittoPlay(0.5f); // wait one second
-                StartCoroutine(coroutine);
-            }*/
+           
 
 
         }
@@ -184,16 +178,12 @@ public class PlayerController : MonoBehaviour
             eatable1 = false;
             eatable2 = false;
             eatable3 = true;
-            
-
+            SoundManager.PlaySound("chomp");
             Destroy(collision.gameObject);
+
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().redColor();
-            /*if(canPlaySound ==true){
-                SoundManager.PlaySound("chomp");
-                coroutine = waittoPlay(0.5f); // wait one second
-                StartCoroutine(coroutine);
-            }*/
+            
 
 
         }
@@ -225,11 +215,7 @@ public class PlayerController : MonoBehaviour
         gamemanager.GetComponent<GameManager>().GameOver();
     }
 
-   /* IEnumerator waittoPlay(float _waitTime){
-        canPlaySound = false;
-        yield return new WaitForSeconds(_waitTime);
-        canPlaySound = true;
-    }*/
+   
 
     
 }

@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 7660473904685948341, guid: a3935cb2621c6894bb19d9061bce84df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7660473904685948341, guid: a3935cb2621c6894bb19d9061bce84df,
         type: 3}
@@ -319,7 +319,7 @@ PrefabInstance:
     - target: {fileID: 2955596088538744386, guid: c9b150ccce709d848b42ea858c75763a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2955596088538744386, guid: c9b150ccce709d848b42ea858c75763a,
         type: 3}
@@ -502,7 +502,7 @@ PrefabInstance:
     - target: {fileID: 2955596088538744386, guid: c9b150ccce709d848b42ea858c75763a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2955596088538744386, guid: c9b150ccce709d848b42ea858c75763a,
         type: 3}
@@ -571,7 +571,7 @@ PrefabInstance:
     - target: {fileID: 8025200016707043806, guid: ef10b1076473e9740b51d24868361d48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8025200016707043806, guid: ef10b1076473e9740b51d24868361d48,
         type: 3}
@@ -640,7 +640,7 @@ PrefabInstance:
     - target: {fileID: 8025200016707043806, guid: ef10b1076473e9740b51d24868361d48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8025200016707043806, guid: ef10b1076473e9740b51d24868361d48,
         type: 3}
@@ -734,7 +734,7 @@ PrefabInstance:
     - target: {fileID: 1353244147359479655, guid: d48c7597b4233734395ed011646a8848,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1353244147359479655, guid: d48c7597b4233734395ed011646a8848,
         type: 3}
@@ -886,7 +886,7 @@ PrefabInstance:
     - target: {fileID: 2955596088538744386, guid: c9b150ccce709d848b42ea858c75763a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2955596088538744386, guid: c9b150ccce709d848b42ea858c75763a,
         type: 3}
@@ -1304,7 +1304,7 @@ PrefabInstance:
     - target: {fileID: 7660473904685948341, guid: a3935cb2621c6894bb19d9061bce84df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7660473904685948341, guid: a3935cb2621c6894bb19d9061bce84df,
         type: 3}
@@ -1739,7 +1739,7 @@ PrefabInstance:
     - target: {fileID: 853827158835472505, guid: 3b7139830472f334f9a2f409cb98c540,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 853827158835472505, guid: 3b7139830472f334f9a2f409cb98c540,
         type: 3}
@@ -1813,7 +1813,7 @@ PrefabInstance:
     - target: {fileID: 8025200016707043806, guid: ef10b1076473e9740b51d24868361d48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8025200016707043806, guid: ef10b1076473e9740b51d24868361d48,
         type: 3}
@@ -1883,7 +1883,7 @@ PrefabInstance:
     - target: {fileID: 8889388159978640336, guid: dac2293afef894b4d83c15d8308a7058,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8889388159978640336, guid: dac2293afef894b4d83c15d8308a7058,
         type: 3}
@@ -1992,7 +1992,7 @@ PrefabInstance:
     - target: {fileID: 7660473904685948341, guid: a3935cb2621c6894bb19d9061bce84df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7660473904685948341, guid: a3935cb2621c6894bb19d9061bce84df,
         type: 3}
@@ -2082,7 +2082,7 @@ PrefabInstance:
     - target: {fileID: 4916367183641851274, guid: 0d1d55578194aaa4b8eabedc2ddae740,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4916367183641851274, guid: 0d1d55578194aaa4b8eabedc2ddae740,
         type: 3}
@@ -2107,17 +2107,17 @@ PrefabInstance:
     - target: {fileID: 4916367183641851274, guid: 0d1d55578194aaa4b8eabedc2ddae740,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4916367183641851274, guid: 0d1d55578194aaa4b8eabedc2ddae740,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4916367183641851274, guid: 0d1d55578194aaa4b8eabedc2ddae740,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4916367183641851274, guid: 0d1d55578194aaa4b8eabedc2ddae740,
         type: 3}
@@ -2133,6 +2133,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591740475101067568, guid: 0d1d55578194aaa4b8eabedc2ddae740,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629819707876455784, guid: 0d1d55578194aaa4b8eabedc2ddae740,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1d55578194aaa4b8eabedc2ddae740, type: 3}
@@ -3771,7 +3781,7 @@ Transform:
   - {fileID: 6263824666797475564}
   - {fileID: 6263824666223777155}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &6263824666384411203
 Grid:

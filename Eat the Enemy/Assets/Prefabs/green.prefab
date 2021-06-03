@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 8329282502171824440}
   - component: {fileID: 126193379430150613}
   - component: {fileID: -4546513272853096963}
-  - component: {fileID: 4768947618545161088}
   m_Layer: 9
   m_Name: green
   m_TagString: Eatable1
@@ -299,18 +298,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92cefbd40c0aa7840b076d243bed1618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4768947618545161088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4677486809871391518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c91caa2b4587e64aa1bc0261f77abbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4677486809873247267
