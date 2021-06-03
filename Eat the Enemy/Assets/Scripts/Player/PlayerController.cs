@@ -166,7 +166,12 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
-            SoundManager.PlaySound("chomp");
+            if(canPlaySound ==true){
+                SoundManager.PlaySound("chomp");
+                coroutine = waittoPlay(0.5f); // wait one second
+                StartCoroutine(coroutine);
+            }
+
 
         }
         else if (collision.gameObject.tag == "Eatable3")
@@ -178,7 +183,12 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().redColor();
-            SoundManager.PlaySound("chomp");
+            if(canPlaySound ==true){
+                SoundManager.PlaySound("chomp");
+                coroutine = waittoPlay(0.5f); // wait one second
+                StartCoroutine(coroutine);
+            }
+
 
         }
         else if (collision.gameObject.tag == "NonEatable")
