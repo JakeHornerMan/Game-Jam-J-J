@@ -103,6 +103,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   eatable1: 0
+  eatable2: 0
+  eatable3: 0
+  gamemanager: {fileID: 0}
+  colorIndicator: {fileID: 0}
   action: 0
 --- !u!61 &8629819707876455784
 BoxCollider2D:
