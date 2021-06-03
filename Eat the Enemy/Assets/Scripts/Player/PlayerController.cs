@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
        
     public GameObject gamemanager;
     public GameObject colorIndicator;
+
+    public bool canPlaySound;
     
 
     /*public float win;
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     public void Awake(){
+        canPlaySound = true;
         animator = GetComponent<Animator>();
         canMove = true;
     }
@@ -146,7 +149,11 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
-            SoundManager.PlaySound("chomp");
+            if(canPlaySound ==true){
+                SoundManager.PlaySound("chomp");
+                coroutine = waittoPlay(0.5f); // wait one second
+                StartCoroutine(coroutine);
+            }
 
 
         }
@@ -200,6 +207,12 @@ public class PlayerController : MonoBehaviour
     IEnumerator waittoDeath(float _waitTime){
         yield return new WaitForSeconds(_waitTime);
         gamemanager.GetComponent<GameManager>().GameOver();
+    }
+
+    IEnumerator waittoPlay(float _waitTime){
+        canPlaySound = false;
+        yield return new WaitForSeconds(_waitTime);
+        canPlaySound = true;
     }
 
     
