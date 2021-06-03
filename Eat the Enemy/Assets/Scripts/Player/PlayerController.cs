@@ -5,29 +5,27 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     private IEnumerator coroutine;
 
     public bool canMove;
     public float moveSpeed;
     public LayerMask solidObjectsLayer;
-   
+
     public bool eatable1 = false;
     public bool eatable2 = false;
     public bool eatable3 = false;
-  
-       
+
+
     public GameObject gamemanager;
     public GameObject colorIndicator;
 
-    public bool canPlaySound;
-    
 
     /*public float win;
     public float winPoints = 0;
     public bool dead = false;*/
 
-    
+
 
     public int action = 0;
     private bool isMoving;
@@ -35,12 +33,11 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     public void Awake(){
-        canPlaySound = true;
         animator = GetComponent<Animator>();
         canMove = true;
     }
 
-   
+
 
     //movement
     private void Update()
@@ -62,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                
+
                 animator.SetFloat("inputx", input.x);
                 animator.SetFloat("inputy", input.y);
 
@@ -88,7 +85,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator Move(Vector3 targetPos)
     {
         isMoving = true;
-        
+
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
@@ -98,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
         isMoving = false;
 
-        
+
     }
 
     //can you walk on area yes/no
@@ -121,8 +118,8 @@ public class PlayerController : MonoBehaviour
             if (eatable1 == false)
             {
                 Death();
-                
-                
+
+
             }
         }
         else if (collision.gameObject.tag == "Trap2")
@@ -130,7 +127,7 @@ public class PlayerController : MonoBehaviour
             if (eatable2 == false)
             {
                 Death();
-                
+
             }
         }
         else if (collision.gameObject.tag == "Trap3")
@@ -143,7 +140,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Eatable1")
         {
-            
+
             eatable1 = true;
             eatable2 = false;
             eatable3 = false;
@@ -152,13 +149,13 @@ public class PlayerController : MonoBehaviour
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
-            
+
 
 
         }
         else if (collision.gameObject.tag == "Eatable2")
         {
-            //SoundManager.PlaySound("chomp");
+            SoundManager.PlaySound("chomp");
             eatable1 = false;
             eatable2 = true;
             eatable3 = false;
@@ -168,13 +165,13 @@ public class PlayerController : MonoBehaviour
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
-           
+
 
 
         }
         else if (collision.gameObject.tag == "Eatable3")
         {
-            //SoundManager.PlaySound("chomp");
+            SoundManager.PlaySound("chomp");
             eatable1 = false;
             eatable2 = false;
             eatable3 = true;
@@ -183,7 +180,7 @@ public class PlayerController : MonoBehaviour
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().redColor();
-            
+
 
 
         }
@@ -196,7 +193,7 @@ public class PlayerController : MonoBehaviour
             SoundManager.PlaySound("winner");
             gamemanager.GetComponent<GameManager>().Winner();
         }
-        
+
 
     }
 
@@ -205,17 +202,17 @@ public class PlayerController : MonoBehaviour
         SoundManager.PlaySound("death");
         coroutine = waittoDeath(0.5f); // wait one second
         StartCoroutine(coroutine);
-        
+
     }
 
-    
+
 
     IEnumerator waittoDeath(float _waitTime){
         yield return new WaitForSeconds(_waitTime);
         gamemanager.GetComponent<GameManager>().GameOver();
     }
 
-   
 
-    
+
+
 }
