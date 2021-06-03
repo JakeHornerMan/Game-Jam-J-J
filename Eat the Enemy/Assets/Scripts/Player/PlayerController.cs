@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
 
     public GameObject gamemanager;
+
+    public GameObject soundmanager;
+
     public GameObject colorIndicator;
 
 
@@ -35,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public void Awake(){
         animator = GetComponent<Animator>();
         canMove = true;
+
+        soundmanager = GameObject.Find("Sound Handler");
     }
 
 
@@ -144,13 +149,11 @@ public class PlayerController : MonoBehaviour
             eatable1 = true;
             eatable2 = false;
             eatable3 = false;
-            SoundManager.PlaySound("chomp");
             Destroy(collision.gameObject);
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
-
-
+            soundmanager.GetComponent<SoundManager>().PlaySound("chomp");
 
         }
         else if (collision.gameObject.tag == "Eatable2")
@@ -159,14 +162,14 @@ public class PlayerController : MonoBehaviour
             eatable1 = false;
             eatable2 = true;
             eatable3 = false;
-            SoundManager.PlaySound("chomp");
+            
             Destroy(collision.gameObject);
 
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
 
-
+            soundmanager.GetComponent<SoundManager>().PlaySound("chomp");
 
         }
         else if (collision.gameObject.tag == "Eatable3")
@@ -175,13 +178,12 @@ public class PlayerController : MonoBehaviour
             eatable1 = false;
             eatable2 = false;
             eatable3 = true;
-            SoundManager.PlaySound("chomp");
             Destroy(collision.gameObject);
 
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().redColor();
 
-
+            soundmanager.GetComponent<SoundManager>().PlaySound("chomp");
 
         }
         else if (collision.gameObject.tag == "NonEatable")
@@ -190,7 +192,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Winner")
         {
-            SoundManager.PlaySound("winner");
+            soundmanager.GetComponent<SoundManager>().PlaySound("winner");
             gamemanager.GetComponent<GameManager>().Winner();
         }
 
@@ -199,7 +201,7 @@ public class PlayerController : MonoBehaviour
 
     public void Death(){
         canMove = false;
-        SoundManager.PlaySound("death");
+        soundmanager.GetComponent<SoundManager>().PlaySound("death");
         coroutine = waittoDeath(0.5f); // wait one second
         StartCoroutine(coroutine);
 

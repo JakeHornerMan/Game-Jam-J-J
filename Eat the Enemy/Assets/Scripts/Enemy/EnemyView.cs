@@ -17,6 +17,8 @@ public class EnemyView : MonoBehaviour
 
     public GameObject gamemanager;
 
+    public GameObject soundmanager;
+
     public float distance;
 
     private RaycastHit2D view;
@@ -25,6 +27,7 @@ public class EnemyView : MonoBehaviour
     public void Awake(){
         animator = GetComponent<Animator>();
         gamemanager = GameObject.Find("GameManager");
+        soundmanager = GameObject.Find("Sound Handler");
     }
 
     
@@ -53,7 +56,7 @@ public class EnemyView : MonoBehaviour
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
                     
-                    SoundManager.PlaySound("spotted");
+                    soundmanager.GetComponent<SoundManager>().PlaySound("spotted");
                 }
             }
             else{
@@ -74,7 +77,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointDown.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
-                    SoundManager.PlaySound("spotted");
+                    soundmanager.GetComponent<SoundManager>().PlaySound("spotted");
                 }
             }
             else{
@@ -95,7 +98,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointLeft.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
-                    SoundManager.PlaySound("spotted");
+                    soundmanager.GetComponent<SoundManager>().PlaySound("spotted");
                 }
                 else{
                     Debug.DrawLine(castpointLeft.position, endPos, Color.green);
@@ -119,7 +122,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointRight.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
-                    SoundManager.PlaySound("spotted");
+                    soundmanager.GetComponent<SoundManager>().PlaySound("spotted");
                 }
             }
             else{

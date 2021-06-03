@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip chomp, death, spotted, winner;
+    public  AudioClip chomp, death, spotted, winner;
     static AudioSource audioSrc;
     void Start()
     {
@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
         winner = Resources.Load<AudioClip>("winner");
     }
     // Update is called once per frame
-   public static void PlaySound(string sound) //function called in other sctipts to play sound
+   public void PlaySound(string sound) //function called in other sctipts to play sound
     {
         switch (sound) 
         {
