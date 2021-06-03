@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    
+    private IEnumerator coroutine;
+
+    public bool canMove;
     public float moveSpeed;
     public LayerMask solidObjectsLayer;
    
@@ -30,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public void Awake(){
         animator = GetComponent<Animator>();
+        canMove = true;
     }
 
    
@@ -37,6 +42,12 @@ public class PlayerController : MonoBehaviour
     //movement
     private void Update()
     {
+        if(canMove == true){
+            checkMove();
+        }
+    }
+
+    public void checkMove(){
 
         if (!isMoving)
         {
@@ -106,7 +117,8 @@ public class PlayerController : MonoBehaviour
         {
             if (eatable1 == false)
             {
-                gamemanager.GetComponent<GameManager>().GameOver();
+                TrapDeath();
+                
                 
             }
         }
@@ -114,14 +126,16 @@ public class PlayerController : MonoBehaviour
         {
             if (eatable2 == false)
             {
-                gamemanager.GetComponent<GameManager>().GameOver();
+                TrapDeath();
+                
             }
         }
         else if (collision.gameObject.tag == "Trap3")
         {
             if (eatable3 == false)
             {
-                gamemanager.GetComponent<GameManager>().GameOver();
+                TrapDeath();
+
             }
         }
         else if (collision.gameObject.tag == "Eatable1")
@@ -168,6 +182,19 @@ public class PlayerController : MonoBehaviour
         }
         
 
+    }
+
+    public void TrapDeath(){
+        canMove = false;
+        SoundManager.PlaySound("death");
+        coroutine = waittoTrapDeath(1f); // wait one second
+        StartCoroutine(coroutine);
+        
+    }
+
+    IEnumerator waittoTrapDeath(float _waitTime){
+        yield return new WaitForSeconds(_waitTime);
+        gamemanager.GetComponent<GameManager>().GameOver();
     }
 
 }
