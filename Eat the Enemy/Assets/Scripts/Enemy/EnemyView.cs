@@ -12,6 +12,8 @@ public class EnemyView : MonoBehaviour
     public Transform castpointRight;
     public Transform castpointLeft;
 
+    private IEnumerator coroutine;
+
     public GameObject gamemanager;
 
     public float distance;
@@ -47,6 +49,8 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointUp.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    
+                    SoundManager.PlaySound("spotted");
                 }
             }
             else{
@@ -67,6 +71,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointDown.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    SoundManager.PlaySound("spotted");
                 }
             }
             else{
@@ -87,6 +92,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointLeft.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    SoundManager.PlaySound("spotted");
                 }
                 else{
                     Debug.DrawLine(castpointLeft.position, endPos, Color.green);
@@ -110,6 +116,7 @@ public class EnemyView : MonoBehaviour
                     Debug.DrawLine(castpointRight.position, endPos, Color.red);
                     Debug.Log(hit.collider.tag);
                     gamemanager.GetComponent<GameManager>().GameOver();
+                    SoundManager.PlaySound("spotted");
                 }
             }
             else{
@@ -145,9 +152,23 @@ public class EnemyView : MonoBehaviour
         else if (dir == "right"){
             action = State.right;
         } 
-    } 
+    }
 
+    /*public void Spotted()
+    {
+        Time.timeScale = 0f;
 
+        SoundManager.PlaySound("spotted");
+        coroutine = waittoSpotted(2f); // wait one second
+        StartCoroutine(coroutine);
+
+    }
+
+    IEnumerator waittoSpotted(float _waitTime)
+    {
+        yield return new WaitForSeconds(_waitTime);
+        gamemanager.GetComponent<GameManager>().GameOver();
+    }*/
 
 }
 

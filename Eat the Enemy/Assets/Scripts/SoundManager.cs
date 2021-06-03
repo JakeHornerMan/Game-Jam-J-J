@@ -11,10 +11,10 @@ public class SoundManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource>(); //find audio source component
 
         //get sound resources
-        chomp = Resources.Load<AudioClip>("Chomp");
-        death = Resources.Load<AudioClip>("Death");
-        spotted = Resources.Load<AudioClip>("Spotted");
-        winner = Resources.Load<AudioClip>("Winner");
+        chomp = Resources.Load<AudioClip>("chomp");
+        death = Resources.Load<AudioClip>("death");
+        spotted = Resources.Load<AudioClip>("spotted");
+        winner = Resources.Load<AudioClip>("winner");
     }
     // Update is called once per frame
    public static void PlaySound(string sound) //function called in other sctipts to play sound
@@ -24,7 +24,7 @@ public class SoundManager : MonoBehaviour
             case "chomp":
                 audioSrc.PlayOneShot(chomp);
                 break;
-            case "Death":
+            case "death":
                 audioSrc.PlayOneShot(death);
                 break;
             case "spotted":

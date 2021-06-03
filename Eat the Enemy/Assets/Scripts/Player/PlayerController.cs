@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
         {
             if (eatable1 == false)
             {
-                TrapDeath();
+                Death();
                 
                 
             }
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
         {
             if (eatable2 == false)
             {
-                TrapDeath();
+                Death();
                 
             }
         }
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         {
             if (eatable3 == false)
             {
-                TrapDeath();
+                Death();
 
             }
         }
@@ -146,6 +146,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
+            SoundManager.PlaySound("chomp");
 
 
         }
@@ -158,6 +159,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
+            SoundManager.PlaySound("chomp");
 
         }
         else if (collision.gameObject.tag == "Eatable3")
@@ -169,6 +171,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().redColor();
+            SoundManager.PlaySound("chomp");
 
         }
         else if (collision.gameObject.tag == "NonEatable")
@@ -177,24 +180,27 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Winner")
         {
-            
+            SoundManager.PlaySound("winner");
             gamemanager.GetComponent<GameManager>().Winner();
         }
         
 
     }
 
-    public void TrapDeath(){
+    public void Death(){
         canMove = false;
         SoundManager.PlaySound("death");
-        coroutine = waittoTrapDeath(1f); // wait one second
+        coroutine = waittoDeath(0.5f); // wait one second
         StartCoroutine(coroutine);
         
     }
 
-    IEnumerator waittoTrapDeath(float _waitTime){
+    
+
+    IEnumerator waittoDeath(float _waitTime){
         yield return new WaitForSeconds(_waitTime);
         gamemanager.GetComponent<GameManager>().GameOver();
     }
 
+    
 }
