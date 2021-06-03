@@ -143,14 +143,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Eatable1")
         {
-            SoundManager.PlaySound("chomp");
+            //SoundManager.PlaySound("chomp");
             eatable1 = true;
             eatable2 = false;
             eatable3 = false;
-            collision.gameObject.GetComponent<Renderer>().enabled = false;
-            collision.gameObject.GetComponent<EnemyView>().enabled = false;
-            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            Destroy(collision.gameObject, 3f);
+            
+            Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
             /*if (canPlaySound == true)
@@ -164,14 +162,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Eatable2")
         {
-            SoundManager.PlaySound("chomp");
+            //SoundManager.PlaySound("chomp");
             eatable1 = false;
             eatable2 = true;
             eatable3 = false;
-            collision.gameObject.GetComponent<Renderer>().enabled = false;
-            collision.gameObject.GetComponent<EnemyView>().enabled = false;
-            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            Destroy(collision.gameObject, 3f);
+            
+            Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
             /*if(canPlaySound ==true){
@@ -184,14 +180,13 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Eatable3")
         {
-            SoundManager.PlaySound("chomp");
+            //SoundManager.PlaySound("chomp");
             eatable1 = false;
             eatable2 = false;
             eatable3 = true;
-            collision.gameObject.GetComponent<Renderer>().enabled = false;
-            collision.gameObject.GetComponent<EnemyView>().enabled = false;
-            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            Destroy(collision.gameObject, 3f);
+            
+
+            Destroy(collision.gameObject);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().redColor();
             /*if(canPlaySound ==true){
