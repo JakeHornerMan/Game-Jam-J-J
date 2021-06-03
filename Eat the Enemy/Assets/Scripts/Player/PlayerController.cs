@@ -150,16 +150,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject, 3f);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().greenColor();
-<<<<<<< HEAD
-            /*if (canPlaySound == true)
-            {
-                SoundManager.PlaySound("chomp");
-                coroutine = waittoPlay(0.5f); // wait one second
-                StartCoroutine(coroutine);
-            }*/
-=======
             SoundManager.PlaySound("chomp");
->>>>>>> parent of d7a1bf4 (under construction)
 
 
         }
@@ -175,11 +166,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject, 3f);
             //dead = true;
             colorIndicator.GetComponent<IconColorChange>().blueColor();
-            /*if(canPlaySound ==true){
-                SoundManager.PlaySound("chomp");
-                coroutine = waittoPlay(0.5f); // wait one second
-                StartCoroutine(coroutine);
-            }*/
+
 
 
         }
@@ -230,15 +217,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(_waitTime);
         gamemanager.GetComponent<GameManager>().GameOver();
     }
-
-<<<<<<< HEAD
-   /* IEnumerator waittoPlay(float _waitTime){
-        canPlaySound = false;
-        yield return new WaitForSeconds(_waitTime);
-        canPlaySound = true;
-    }*/
-
-=======
->>>>>>> parent of d7a1bf4 (under construction)
-    
 }
