@@ -13,8 +13,9 @@ public class GameManager : MonoBehaviour
     public GameObject pauseBtn;
     public GameObject resumeBtn;
     public GameObject pausetext;
-
     
+
+
 
     void Start()
     {
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
         pausetext.SetActive(false);
         pauseBtn.SetActive(true);
         resumeBtn.SetActive(false);
+
     }
 
     public void Winner()
