@@ -831,6 +831,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1808701430147311256, guid: d48c7597b4233734395ed011646a8848,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1255839412}
+    - target: {fileID: 1808701430147311256, guid: d48c7597b4233734395ed011646a8848,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 5344563188752992566, guid: d48c7597b4233734395ed011646a8848,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -862,6 +872,12 @@ GameObject:
 --- !u!1 &340331377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5846087746719354842, guid: d48c7597b4233734395ed011646a8848,
+    type: 3}
+  m_PrefabInstance: {fileID: 340331375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &340331378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6756260687610582025, guid: d48c7597b4233734395ed011646a8848,
     type: 3}
   m_PrefabInstance: {fileID: 340331375}
   m_PrefabAsset: {fileID: 0}
@@ -1980,6 +1996,11 @@ PrefabInstance:
       propertyPath: gameovertext
       value: 
       objectReference: {fileID: 835337717}
+    - target: {fileID: 8889388159978640367, guid: dac2293afef894b4d83c15d8308a7058,
+        type: 3}
+      propertyPath: nextLevelBtn
+      value: 
+      objectReference: {fileID: 340331378}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac2293afef894b4d83c15d8308a7058, type: 3}
 --- !u!1001 &1965456228

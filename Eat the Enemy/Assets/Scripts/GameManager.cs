@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseBtn;
     public GameObject resumeBtn;
     public GameObject pausetext;
+    public GameObject nextLevelBtn;
     
 
 
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
         pauseBtn.SetActive(true);
         resumeBtn.SetActive(false);
         pausetext.SetActive(false);
+        nextLevelBtn.SetActive(false);
     }
 
     public void GameOver(){
@@ -47,6 +49,13 @@ public class GameManager : MonoBehaviour
     public void Menu(){
         SceneManager.LoadScene("Main Menu");
         Debug.Log("button works");
+    }
+
+    public void NextLevel()
+    {
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 
     public void Pause()
@@ -78,6 +87,7 @@ public class GameManager : MonoBehaviour
 
         pauseBtn.SetActive(false);
         menuBtn.SetActive(true);
+        nextLevelBtn.SetActive(true);
         restartBtn.SetActive(true);
         wintext.SetActive(true);
     }
